@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treino de JS simples</title>
+    <style>
+        html, body {
+            background-color: lightslategray;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <script>
+        var data1 = Number.parseInt(window.prompt('Digite o ano em que você nasceu:'))
+        var data2 = Number.parseInt(window.prompt('Digite aqui o sua idade:'))
+
+        var data3 = data1 + data2
+
+        window.alert('Agora será calculado aproximadamente o Ano em que estamos, caso você já tenha feito aniversário este ano a data estará correta, aperte em OK.')
+
+        document.write(` Nós estamos no ano de ${data3}. `)
+
+    </script>
+</body>
+</html>
