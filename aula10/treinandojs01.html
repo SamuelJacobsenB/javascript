@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font: normal 20px Arial;
+        }
+
+        div {
+            background-color: green;
+            color: white;
+            height: 200px;
+            width: 200px;
+            margin: 40px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="funcao0" onmouseenter="entrar()" onmouseout="sair()">Entre...</div>
+    <div id="funcao1" onclick="clicar()" onmouseout="sair1()">Clique...</div>
+    
+    <script>
+
+        var d0 = window.document.querySelector('div#funcao0')
+        var d1 = window.document.querySelector('div#funcao1')
+
+        function entrar() {
+            d0.innerHTML = 'Entrou!'
+            d0.style.backgroundColor = 'red'
+            d0.style.height = '250px'
+            d0.style.width = '250px'
+            d0.style.lineHeight = '250px'
+        }
+        function sair() {
+            d0.innerHTML = 'Saiu!'
+            d0.style.backgroundColor = 'green'
+            d0.style.height = '200px'
+            d0.style.width = '200px'
+            d0.style.lineHeight = '200px'
+        }
+        function clicar() {
+            d1.innerHTML = 'Clicou'
+            d1.style.backgroundColor = 'red'
+            d1.style.height = '250px'
+            d1.style.width = '250px'
+            d1.style.lineHeight = '250px'
+        }
+        function sair1() {
+            d1.innerHTML = 'Saiu!'
+            d1.style.backgroundColor = 'green'
+            d1.style.height = '200px'
+            d1.style.width = '200px'
+            d1.style.lineHeight = '200px'
+        }
+
+    </script>
+</body>
+</html>
