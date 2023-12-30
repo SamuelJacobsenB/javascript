@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font: normal 20px Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá!!!</h1>
+    <p id="comprimentar"></p>
+
+    <script>
+        var agora = new Date()
+        var hora = agora.getHours()
+        var p = window.document.getElementById('comprimentar')
+
+        p.innerHTML = `Agora são aproximadamente ${hora} horas.<br>`
+        if (hora < 12 && hora >= 5) {
+            p.innerHTML += 'Bom dia!'
+        } else if (hora < 5) {
+            p.innerHTML += 'Boa Madrugada!'
+        } else if (hora >= 12 && hora < 18) {
+                p.innerHTML += 'Boa Tarde!'
+        } else if (hora >= 18) {
+                p.innerHTML += 'Boa Noite!'
+        }
+
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font: normal 20px Arial;
+        }
+        input {
+            width: 200px;
+            font: normal 20px Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Informe sua idade abaixo para que possamos verificar seu respectivo direito em relação ao voto:</h1>
+    <label for="txtn">Informe aqui sua idade:</label>
+    <input type="number" name="txtn" id="txtn">
+    <input type="button" value="Verifique" onclick="clicar()">
+    <p id="informacao"></p>
+
+    <script>
+        function clicar() {
+
+            var idade = window.document.querySelector('input#txtn')
+            var p = window.document.querySelector('p#informacao')
+            var numIdade = Number(idade.value)
+
+            p.innerHTML = `Como você têm <strong>${numIdade} anos</strong> de idade;<br>`
+
+            if (numIdade < 16) {
+                p.innerHTML += 'você ainda <strong>Não Vota</strong>.'
+            } else if (numIdade < 18 || numIdade > 65) {
+                p.innerHTML += 'você pode <strong>Votar Opcionalmente</strong>.'
+            } else {
+                p.innerHTML += 'você têm que <strong>Votar Obrigatóriamente</strong>.'
+            }
+        }
+
+
+    </script>
+</body>
+</html>

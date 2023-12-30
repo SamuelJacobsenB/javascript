@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font: normal 20px Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá...</h1>
+    <p id="diasem"></p>
+
+    <script>
+        var agora = new Date()
+        var diaSem = agora.getDay()
+        var p = window.document.querySelector('p#diasem')
+
+        switch (diaSem) {
+            case 0:
+                p.innerHTML = 'Tenha um ótimo <strong>Domingo</strong>!!!'
+                break
+            case 1:
+                p.innerHTML = 'Tenha uma ótima <strong>Segunda</strong>!!!'
+                break
+            case 2:
+                p.innerHTML = 'Tenha uma ótima <strong>Terça</strong>!!!'
+                break
+            case 3:
+                p.innerHTML = 'Tenha uma ótima <strong>Quarta</strong>!!!'
+                break
+            case 4:
+                p.innerHTML = 'Tenha uma ótima <strong>Quinta</strong>!!!'
+                break
+            case 5:
+                p.innerHTML = 'Tenha uma ótima <strong>Sexta</strong>!!!'
+                break
+            case 6:
+                p.innerHTML = 'Tenha um ótimo <strong>Sábado</strong>!!!'
+                break
+            default:
+                p.innerHTML = '<strong>[ERRO]</strong> Data Inválida!!!'
+                break
+        }
+    </script>
+</body>
+</html>
