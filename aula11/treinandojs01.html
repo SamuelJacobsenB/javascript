@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrangeiro</title>
+    <style>
+        body {
+            color: black;
+            font: normal 20px Arial;
+        }
+
+        input#txtinf {
+            width: 200px;
+            font: 20px Arial;
+        }
+
+        input {
+            width: 150px;
+            font: 20px Arial;
+        }
+
+        div {
+            font: 20px Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Responda ao questionário para sabermos se você é estrangeiro.</h1>
+    <label for="txtinf">Escolha aqui seu país:</label>
+    <input type="text" name="txtinf" id="txtinf">
+    <input type="button" value="Verificar:" onclick="clicar()">
+    <div id="res">
+
+    </div>
+
+    <script>
+        function clicar() {
+            var país = String(document.querySelector('input#txtinf'))
+            var p = String(país.innerHTML)
+            var res = window.document.querySelector('div#res')
+            
+            if (país == 'Brasil') {
+                res.innerText = `Você é Brasileiro.`
+            } else {
+                res.innerText = `Você é Estrangeiro.`
+            }
+        }
+        //erro
+    </script>
+
+</body>
+</html>
